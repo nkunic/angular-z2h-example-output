@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css'],
 })
 export class ParentComponent {
+  msgFromChild = '';
+
   receiveMessage(msg) {
-    console.log(msg);
+    //console.log(msg);
+    this.msgFromChild = msg;
   }
 }

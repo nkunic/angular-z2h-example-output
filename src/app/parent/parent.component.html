@@ -2,6 +2,6 @@
 <h2>@Output - pass data from child to parent</h2>
 
 <h3>Parent component</h3>
-<app-child 
-  (sendMessageEmitter)="receiveMessage($event)">
-</app-child>
+<p>Message from child: {{ msgFromChild }}</p>
+
+<app-child (sendMessageEmitter)="receiveMessage($event)"> </app-child>
