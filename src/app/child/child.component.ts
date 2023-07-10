@@ -1,14 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css'],
 })
-export class ChildComponent implements OnInit {
-  @Input() channelName = 'WebTechTalk';
+export class ChildComponent {
+  sendMessageEmitter = new EventEmitter();
 
-  constructor() {}
-
-  ngOnInit() {}
+  sendMessageToParent(e) {
+    //console.log(e.target.value);
+    this.sendMessageEmitter.emit(e.target.value);
+  }
 }

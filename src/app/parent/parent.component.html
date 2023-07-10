@@ -1,4 +1,7 @@
-<h1>Parent component</h1>
-<input type="text" [(ngModel)]="channelNameInParent">
+<h1>Communication between components</h1>
+<h2>@Output - pass data from child to parent</h2>
 
-<app-child [channelName]="channelNameInParent"></app-child>
+<h3>Parent component</h3>
+<app-child 
+  (sendMessageToParent)="receiveMessage($event)">
+</app-child>

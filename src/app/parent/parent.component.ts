@@ -1,16 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  styleUrls: ['./parent.component.css'],
 })
-export class ParentComponent implements OnInit {
-
-  channelNameInParent = 'WebTechTalk';
-  constructor() { }
-
-  ngOnInit() {
+export class ParentComponent {
+  receiveMessage(msg) {
+    console.log(msg);
   }
-
 }
